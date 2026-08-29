@@ -23,13 +23,6 @@ var public_assets_data_default = {
 		"size": 20373,
 		"path": "../public/favicon.ico"
 	},
-	"/assets/routes-Dye7dXlm.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"627c-oDq3/xr02tTT602WI1Ec+bWR0AI\"",
-		"mtime": "2026-08-29T09:40:21.178Z",
-		"size": 25212,
-		"path": "../public/assets/routes-Dye7dXlm.js"
-	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"a0-CKGXSIe7TSsqDTmGm/nY1t/o5d0\"",
@@ -37,33 +30,54 @@ var public_assets_data_default = {
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
-	"/assets/index-DX09uSWi.js": {
+	"/assets/routes-oHnX0HDq.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"54c02-2RNPQw6qUTaNEIUetYOWJJ6IQXc\"",
-		"mtime": "2026-08-29T09:40:21.178Z",
-		"size": 347138,
-		"path": "../public/assets/index-DX09uSWi.js"
+		"etag": "\"5a08-bV0RxLl5HZ4p9rqyowSk84hYbHk\"",
+		"mtime": "2026-08-29T10:22:40.486Z",
+		"size": 23048,
+		"path": "../public/assets/routes-oHnX0HDq.js"
 	},
-	"/assets/hero-counseling-jJWt8kPe.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"25e42-PgEgd9u+MGGqC9uE2ljnfXIS//Q\"",
-		"mtime": "2026-08-29T09:40:21.178Z",
-		"size": 155202,
-		"path": "../public/assets/hero-counseling-jJWt8kPe.jpg"
+	"/assets/index-DEwI8Lpv.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"54bbb-pJzxqunUiVL8DuUiLgKl5z61ZN0\"",
+		"mtime": "2026-08-29T10:22:40.485Z",
+		"size": 347067,
+		"path": "../public/assets/index-DEwI8Lpv.js"
 	},
-	"/assets/styles-Dv-Uz4km.css": {
+	"/assets/styles-DpyKD4z9.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"146ba-oV2xN/0vB6a+nj8DaRcc1/2M9G8\"",
-		"mtime": "2026-08-29T09:40:21.180Z",
-		"size": 83642,
-		"path": "../public/assets/styles-Dv-Uz4km.css"
+		"etag": "\"13664-K0YNcRGBNkbVV1X8WIc1MewpoM0\"",
+		"mtime": "2026-08-29T10:22:40.486Z",
+		"size": 79460,
+		"path": "../public/assets/styles-DpyKD4z9.css"
 	},
-	"/assets/story-session-3HaigOKk.jpg": {
+	"/images/real-child-mental-health.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"204da-7yNCKaB/jU+yJbxGYV0juPYelIs\"",
-		"mtime": "2026-08-29T09:40:21.179Z",
-		"size": 132314,
-		"path": "../public/assets/story-session-3HaigOKk.jpg"
+		"etag": "\"b2e2a-lrzmlyfZVUBFXMx6ESzYRd98j0o\"",
+		"mtime": "2026-08-29T10:18:00.816Z",
+		"size": 732714,
+		"path": "../public/images/real-child-mental-health.jpg"
+	},
+	"/images/real-teen-counselling.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"b0059-qaSdQQTXA9a6KWxevhR4F9ty9PA\"",
+		"mtime": "2026-08-29T10:19:50.704Z",
+		"size": 720985,
+		"path": "../public/images/real-teen-counselling.jpg"
+	},
+	"/images/real-teacher-student-support.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"cf0e0-Ezg1chT65waaNwWRYGu6raF/3to\"",
+		"mtime": "2026-08-29T10:18:12.719Z",
+		"size": 848096,
+		"path": "../public/images/real-teacher-student-support.jpg"
+	},
+	"/images/real-family-child-therapy.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"c9313-1oXq6oLKc8xV+/nICcnq/5wTHlc\"",
+		"mtime": "2026-08-29T10:18:34.522Z",
+		"size": 824083,
+		"path": "../public/images/real-family-child-therapy.jpg"
 	}
 };
 //#endregion
