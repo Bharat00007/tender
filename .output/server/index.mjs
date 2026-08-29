@@ -16,13 +16,6 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/favicon.ico": {
-		"type": "image/vnd.microsoft.icon",
-		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
-		"mtime": "2026-08-29T07:50:15.000Z",
-		"size": 20373,
-		"path": "../public/favicon.ico"
-	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
 		"etag": "\"a0-CKGXSIe7TSsqDTmGm/nY1t/o5d0\"",
@@ -30,54 +23,61 @@ var public_assets_data_default = {
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
-	"/assets/routes-oHnX0HDq.js": {
+	"/assets/routes-CCz3VadP.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"5a08-bV0RxLl5HZ4p9rqyowSk84hYbHk\"",
-		"mtime": "2026-08-29T10:22:40.486Z",
-		"size": 23048,
-		"path": "../public/assets/routes-oHnX0HDq.js"
+		"etag": "\"6137-zk6Vlu/bLc14qkNnobMvYJPkz08\"",
+		"mtime": "2026-08-29T12:23:40.254Z",
+		"size": 24887,
+		"path": "../public/assets/routes-CCz3VadP.js"
 	},
-	"/assets/index-DEwI8Lpv.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"54bbb-pJzxqunUiVL8DuUiLgKl5z61ZN0\"",
-		"mtime": "2026-08-29T10:22:40.485Z",
-		"size": 347067,
-		"path": "../public/assets/index-DEwI8Lpv.js"
+	"/favicon.ico": {
+		"type": "image/vnd.microsoft.icon",
+		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
+		"mtime": "2026-08-29T07:50:15.000Z",
+		"size": 20373,
+		"path": "../public/favicon.ico"
 	},
-	"/assets/styles-DpyKD4z9.css": {
+	"/assets/styles-REwRBOyy.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"13664-K0YNcRGBNkbVV1X8WIc1MewpoM0\"",
-		"mtime": "2026-08-29T10:22:40.486Z",
-		"size": 79460,
-		"path": "../public/assets/styles-DpyKD4z9.css"
+		"etag": "\"13c87-ZuP97gQDfImQlB4UnnDfQbyyHdI\"",
+		"mtime": "2026-08-29T12:23:40.255Z",
+		"size": 81031,
+		"path": "../public/assets/styles-REwRBOyy.css"
+	},
+	"/assets/index-cikfeW2x.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"54bc9-X9wsPBzDa2qArOCl8zyMCGZ8VZE\"",
+		"mtime": "2026-08-29T12:23:40.246Z",
+		"size": 347081,
+		"path": "../public/assets/index-cikfeW2x.js"
 	},
 	"/images/real-child-mental-health.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"b2e2a-lrzmlyfZVUBFXMx6ESzYRd98j0o\"",
-		"mtime": "2026-08-29T10:18:00.816Z",
-		"size": 732714,
+		"etag": "\"bfffa-aaYw/T1Xor7Jh2KrzeSEjItcwys\"",
+		"mtime": "2026-08-29T11:39:20.528Z",
+		"size": 786426,
 		"path": "../public/images/real-child-mental-health.jpg"
-	},
-	"/images/real-teen-counselling.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"b0059-qaSdQQTXA9a6KWxevhR4F9ty9PA\"",
-		"mtime": "2026-08-29T10:19:50.704Z",
-		"size": 720985,
-		"path": "../public/images/real-teen-counselling.jpg"
-	},
-	"/images/real-teacher-student-support.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"cf0e0-Ezg1chT65waaNwWRYGu6raF/3to\"",
-		"mtime": "2026-08-29T10:18:12.719Z",
-		"size": 848096,
-		"path": "../public/images/real-teacher-student-support.jpg"
 	},
 	"/images/real-family-child-therapy.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"c9313-1oXq6oLKc8xV+/nICcnq/5wTHlc\"",
-		"mtime": "2026-08-29T10:18:34.522Z",
-		"size": 824083,
+		"etag": "\"c8567-IE6eEP0JFHrQkdVqIn8nvU0izX4\"",
+		"mtime": "2026-08-29T11:40:00.932Z",
+		"size": 820583,
 		"path": "../public/images/real-family-child-therapy.jpg"
+	},
+	"/images/real-teacher-student-support.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"ceda4-yzfNiM0T0Xpqjhp2j13z0fPCjjE\"",
+		"mtime": "2026-08-29T11:39:34.391Z",
+		"size": 847268,
+		"path": "../public/images/real-teacher-student-support.jpg"
+	},
+	"/images/real-teen-counselling.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"bfa6b-290Arbhy5/Kj2MjALD4zsIkgqIs\"",
+		"mtime": "2026-08-29T11:40:16.087Z",
+		"size": 785003,
+		"path": "../public/images/real-teen-counselling.jpg"
 	}
 };
 //#endregion

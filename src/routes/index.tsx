@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-
+import { useState, useEffect } from "react";
 const title = "TENDER Counselling | A Safe Space to Be Heard";
 const description =
   "Academic, mental health, relationship and health counselling for students, individuals, couples and families.";
@@ -18,9 +18,53 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function RegistrationForm({ idPrefix }: { idPrefix: string }) {
+  return (
+    <form className="registration-form" onSubmit={(e) => e.preventDefault()}>
+      <h3>Register for Counselling</h3>
+      <p>Take the first step towards feeling better.</p>
+      <div className="form-group">
+        <label htmlFor={`${idPrefix}-name`}>Name</label>
+        <input type="text" id={`${idPrefix}-name`} required placeholder="Your full name" />
+      </div>
+      <div className="form-group">
+        <label htmlFor={`${idPrefix}-email`}>Email</label>
+        <input type="email" id={`${idPrefix}-email`} required placeholder="you@example.com" />
+      </div>
+      <div className="form-group">
+        <label htmlFor={`${idPrefix}-phone`}>Phone Number</label>
+        <input type="tel" id={`${idPrefix}-phone`} required placeholder="+91 00000 00000" />
+      </div>
+      <button type="submit" className="button button-primary">Submit Registration</button>
+    </form>
+  );
+}
+
 function Index() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasClosedModal, setHasClosedModal] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!hasClosedModal) {
+        setIsModalOpen(true);
+      }
+    }, 25000);
+    return () => clearTimeout(timer);
+  }, [hasClosedModal]);
+
   return (
     <>
+      {isModalOpen && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <button className="modal-close" onClick={() => { setIsModalOpen(false); setHasClosedModal(true); }} aria-label="Close modal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+            <RegistrationForm idPrefix="modal" />
+          </div>
+        </div>
+      )}
       <main>
         <header className="site-header">
           <a className="brand" href="#top" aria-label="TENDER home">
@@ -672,6 +716,11 @@ function Index() {
               <path d="m12 5 7 7-7 7"></path>
             </svg>
           </a>
+        </section>
+        <section className="registration-section" id="register">
+          <div className="registration-container">
+            <RegistrationForm idPrefix="footer" />
+          </div>
         </section>
         <footer>
           <div className="footer-brand">
