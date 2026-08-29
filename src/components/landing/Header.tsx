@@ -3,7 +3,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "./Logo";
 
 const NAV = [
-  { label: "Why Tendor", href: "#why" },
+  { label: "Why Tender", href: "#why" },
   { label: "Counselling", href: "#counselling" },
   { label: "Resources", href: "#resources" },
   { label: "Services", href: "#services" },

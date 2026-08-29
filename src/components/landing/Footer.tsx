@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 const COLUMNS = [
   {
     title: "Explore",
-    links: ["Why Tendor", "How counselling works", "FAQ"],
+    links: ["Why Tender", "How counselling works", "FAQ"],
   },
   {
     title: "Support",
@@ -48,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t border-ivory/15 pt-6 text-[0.68rem] text-ivory/50">
-          <p>&copy; {new Date().getFullYear()} Tendor. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Tender. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#top" className="transition-colors hover:text-ivory">
               Privacy

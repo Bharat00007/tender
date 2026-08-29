@@ -17,7 +17,7 @@ export function BrandStatement() {
       <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8 lg:py-20">
         <Reveal className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-end lg:gap-20">
           <div>
-            <Eyebrow>What Tendor means</Eyebrow>
+            <Eyebrow>What Tender means</Eyebrow>
             <h2 className="mt-6 font-display text-[2rem] leading-[1.14] text-forest sm:text-[2.7rem] lg:text-[3.1rem]">
               Transforming <em className="italic text-terracotta">Emotions</em>
               <br />
@@ -34,7 +34,7 @@ export function BrandStatement() {
               believes in themselves.
             </p>
             <p>
-              Tendor is not made in a vacuum. We begin with the whole person — academic, emotional,
+              Tender is not made in a vacuum. We begin with the whole person — academic, emotional,
               relational — and work towards understanding, resilience and healthier relationships.
             </p>
           </div>
@@ -145,7 +145,7 @@ export function StorySplit() {
             couple who speak but never quite feel heard — these are not failures. They are signals.
           </p>
           <p className="mt-4 max-w-[52ch] text-[0.82rem] leading-relaxed text-muted-foreground">
-            With Tendor, a story is not something that has to be carried alone. It is something that
+            With Tender, a story is not something that has to be carried alone. It is something that
             can be understood, and slowly, gently, rewritten.
           </p>
 

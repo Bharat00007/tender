@@ -13,7 +13,7 @@ import {
 import { Faq } from "@/components/landing/Faq";
 import { Footer } from "@/components/landing/Footer";
 
-const title = "Tendor — India's Integrated Counselling Platform";
+const title = "Tender — India's Integrated Counselling Platform";
 const description =
   "Therapy-first, confidential counselling for students, individuals, couples and families across academic, mental health, relationship and health care.";
 

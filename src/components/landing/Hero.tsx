@@ -34,7 +34,7 @@ export function Hero() {
               href="#why"
               className="border-b border-forest/40 pb-0.5 text-[0.85rem] font-medium text-forest transition-colors hover:border-terracotta hover:text-terracotta"
             >
-              Understand Tendor
+              Understand Tender
             </a>
           </div>
 
