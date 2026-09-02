@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 const title = "TENDER Counselling | A Safe Space to Be Heard";
 const description =
   "Academic, mental health, relationship and health counselling for students, individuals, couples and families.";
@@ -18,11 +18,14 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const SUPPORT_OPTIONS = ["Myself", "My child", "My family", "My partner", "Someone else"];
+
 function RegistrationForm({ idPrefix }: { idPrefix: string }) {
+  const [supportFor, setSupportFor] = useState("");
   return (
     <form className="registration-form" onSubmit={(e) => e.preventDefault()}>
-      <h3>Register for Counselling</h3>
-      <p>Take the first step towards feeling better.</p>
+      <h3>Begin your journey</h3>
+      <p>Take the first step towards understanding and support.</p>
       <div className="form-group">
         <label htmlFor={`${idPrefix}-name`}>Name</label>
         <input type="text" id={`${idPrefix}-name`} required placeholder="Your full name" />
@@ -32,17 +35,59 @@ function RegistrationForm({ idPrefix }: { idPrefix: string }) {
         <input type="email" id={`${idPrefix}-email`} required placeholder="you@example.com" />
       </div>
       <div className="form-group">
-        <label htmlFor={`${idPrefix}-phone`}>Phone Number</label>
+        <label htmlFor={`${idPrefix}-phone`}>Phone</label>
         <input type="tel" id={`${idPrefix}-phone`} required placeholder="+91 00000 00000" />
       </div>
-      <button type="submit" className="button button-primary">Submit Registration</button>
+      <p className="support-for-label">Who is this support for?</p>
+      <div className="support-for-options">
+        {SUPPORT_OPTIONS.map((opt) => (
+          <button
+            key={opt}
+            type="button"
+            className={`support-pill${supportFor === opt ? " active" : ""}`}
+            onClick={() => setSupportFor(opt)}
+          >
+            {opt}
+          </button>
+        ))}
+      </div>
+      <button type="submit" className="button button-primary">
+        Find My Support{" "}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+      <p className="form-privacy">
+        Your information is kept private and used only to help us respond to your enquiry.{" "}
+        <a href="#">Privacy Policy</a>
+      </p>
     </form>
   );
 }
 
+const FAQ_ITEMS = [
+  {
+    q: "What is counselling, and how can it help?",
+    a: "Counselling is a structured conversation with a trained professional. It can help you name what you are experiencing, understand patterns, consider choices and take realistic next steps without judgement.",
+  },
+  {
+    q: "Is counselling only for a crisis?",
+    a: "No. People seek counselling for prevention, clarity, relationships, academic decisions, stress and personal growth. You do not have to wait until life feels unmanageable.",
+  },
+  {
+    q: "Can parents and teenagers attend together?",
+    a: "Yes. Depending on the concern, sessions may include a young person, a parent or the family together. The approach is explained clearly so every person feels heard and respected.",
+  },
+  {
+    q: "Is what I share kept confidential?",
+    a: "Privacy and dignity are central to counselling. Your counsellor will explain confidentiality and its safety-related limits before you begin, including situations involving risk of harm.",
+  },
+];
+
 function Index() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hasClosedModal, setHasClosedModal] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -53,19 +98,41 @@ function Index() {
     return () => clearTimeout(timer);
   }, [hasClosedModal]);
 
+  // Scroll reveal
+  useEffect(() => {
+    const sections = mainRef.current?.querySelectorAll(".reveal-section");
+    if (!sections || typeof IntersectionObserver === "undefined") {
+      sections?.forEach((s) => s.classList.add("is-visible"));
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "-6% 0px -6% 0px" },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
             <button className="modal-close" onClick={() => { setIsModalOpen(false); setHasClosedModal(true); }} aria-label="Close modal">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              &times;
             </button>
             <RegistrationForm idPrefix="modal" />
           </div>
         </div>
       )}
-      <main>
+      <main ref={mainRef}>
         <header className="site-header">
           <a className="brand" href="#top" aria-label="TENDER home">
             <span className="brand-mark" aria-hidden="true">
@@ -73,37 +140,31 @@ function Index() {
             </span>
             <span className="brand-name">TENDER</span>
           </a>
-          <nav className="nav-links" aria-label="Main navigation">
-            <a href="#about">Why TENDER</a>
-            <a href="#support">Our support</a>
-            <a href="#approach">How it works</a>
-            <a href="#answers">Questions</a>
+          <nav className={`nav-links ${isMobileMenuOpen ? "is-open" : ""}`} aria-label="Main navigation">
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>Why TENDER</a>
+            <a href="#support" onClick={() => setIsMobileMenuOpen(false)}>Our support</a>
+            <a href="#approach" onClick={() => setIsMobileMenuOpen(false)}>How it works</a>
+            <a href="#answers" onClick={() => setIsMobileMenuOpen(false)}>Questions</a>
           </nav>
-          <a className="nav-cta" href="#support">
-            Find your support{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="17"
-              height="17"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-arrow-down-right"
-              aria-hidden="true"
-            >
-              <path d="m7 7 10 10"></path>
-              <path d="M17 7v10H7"></path>
-            </svg>
-          </a>
+          <div className="header-right">
+            <a className="nav-cta" href="#register">
+              Find Your Support{" "}
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Toggle menu" aria-expanded={isMobileMenuOpen}>
+              {isMobileMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+              )}
+            </button>
+          </div>
         </header>
         <section className="hero" id="top" aria-labelledby="hero-title">
           <div className="hero-visual">
             <img
               src="/images/real-child-mental-health.jpg"
-              alt="A distressed young child covering her ears during a family counselling conversation"
+              alt="An Indian family speaking with a counsellor in a warm, premium therapy room"
             />
             <div className="image-note">
               <span aria-hidden="true">T</span>
@@ -206,7 +267,7 @@ function Index() {
             </div>
           </div>
         </section>
-        <section className="manifesto" id="about" aria-labelledby="about-title">
+        <section className="manifesto reveal-section" id="about" aria-labelledby="about-title">
           <p className="section-kicker">What TENDER means</p>
           <h2 id="about-title">
             Transforming <em>Emotions</em>
@@ -227,7 +288,7 @@ function Index() {
             </p>
           </div>
         </section>
-        <section className="support-section" id="support" aria-labelledby="support-title">
+        <section className="support-section reveal-section" id="support" aria-labelledby="support-title">
           <div className="section-heading">
             <div>
               <p className="section-kicker">How we support you</p>
@@ -602,7 +663,7 @@ function Index() {
             </li>
           </ol>
         </section>
-        <section className="principles" aria-labelledby="principles-title">
+        <section className="principles reveal-section" aria-labelledby="principles-title">
           <div>
             <p className="section-kicker">Our promise</p>
             <h2 id="principles-title">Care with dignity at the centre.</h2>
@@ -632,65 +693,34 @@ function Index() {
             </article>
           </div>
         </section>
-        <section className="faq-section" id="answers" aria-labelledby="faq-title">
+        <section className="faq-section reveal-section" id="answers" aria-labelledby="faq-title">
           <div className="faq-intro">
             <p className="section-kicker">Questions, answered simply</p>
             <h2 id="faq-title">Before your first conversation</h2>
             <p>Clear answers can make asking for support feel a little easier.</p>
           </div>
           <div className="faq-list">
-            <details open>
-              <summary>
-                <span>What is counselling, and how can it help?</span>
-                <span className="faq-plus" aria-hidden="true">
-                  +
-                </span>
-              </summary>
-              <p>
-                Counselling is a structured conversation with a trained professional. It can help
-                you name what you are experiencing, understand patterns, consider choices and take
-                realistic next steps without judgement.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>Is counselling only for a crisis?</span>
-                <span className="faq-plus" aria-hidden="true">
-                  +
-                </span>
-              </summary>
-              <p>
-                No. People seek counselling for prevention, clarity, relationships, academic
-                decisions, stress and personal growth. You do not have to wait until life feels
-                unmanageable.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>Can parents and teenagers attend together?</span>
-                <span className="faq-plus" aria-hidden="true">
-                  +
-                </span>
-              </summary>
-              <p>
-                Yes. Depending on the concern, sessions may include a young person, a parent or the
-                family together. The approach is explained clearly so every person feels heard and
-                respected.
-              </p>
-            </details>
-            <details>
-              <summary>
-                <span>Is what I share kept confidential?</span>
-                <span className="faq-plus" aria-hidden="true">
-                  +
-                </span>
-              </summary>
-              <p>
-                Privacy and dignity are central to counselling. Your counsellor will explain
-                confidentiality and its safety-related limits before you begin, including situations
-                involving risk of harm.
-              </p>
-            </details>
+            {FAQ_ITEMS.map((item, i) => (
+              <div key={i} className={`faq-item${openFaq === i ? " is-open" : ""}`}>
+                <button
+                  type="button"
+                  className="faq-trigger"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                >
+                  <span>{item.q}</span>
+                  <span className="faq-icon" aria-hidden="true">
+                    <span />
+                    <span />
+                  </span>
+                </button>
+                <div className="faq-panel">
+                  <div className="faq-panel-inner">
+                    <p>{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
         <section className="closing" aria-labelledby="closing-title">
@@ -717,8 +747,52 @@ function Index() {
             </svg>
           </a>
         </section>
-        <section className="registration-section" id="register">
+        <section className="professionals-section reveal-section">
+          <div className="professionals-heading">
+            <p className="section-kicker">The people behind TENDER</p>
+            <h2>Qualified professionals, genuine care.</h2>
+            <p>Every TENDER counsellor is qualified, experienced and committed to ethical, person-centred practice.</p>
+          </div>
+          <div className="professionals-grid">
+            <div className="professional-card">
+              <div className="professional-avatar">
+                <img src="/images/professional_1.jpg" alt="Dr. Ananya Sharma" />
+              </div>
+              <div className="professional-info">
+                <h4>Dr. Ananya Sharma</h4>
+                <p className="role">Counselling Psychologist</p>
+                <p className="bio">Over 10 years of experience in adult psychotherapy, specialising in anxiety, relational trauma and identity.</p>
+              </div>
+            </div>
+            <div className="professional-card">
+              <div className="professional-avatar">
+                <img src="/images/professional_2.jpg" alt="Rahul Verma" />
+              </div>
+              <div className="professional-info">
+                <h4>Rahul Verma</h4>
+                <p className="role">Child &amp; Family Therapist</p>
+                <p className="bio">Dedicated to helping young children and their parents build secure attachments and navigate developmental challenges.</p>
+              </div>
+            </div>
+            <div className="professional-card">
+              <div className="professional-avatar">
+                <img src="/images/professional_3.jpg" alt="Dr. Priya Kapoor" />
+              </div>
+              <div className="professional-info">
+                <h4>Dr. Priya Kapoor</h4>
+                <p className="role">Academic Counsellor</p>
+                <p className="bio">Expert in student well-being, academic pressure management and adolescent emotional development.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="registration-section reveal-section" id="register">
           <div className="registration-container">
+            <div className="registration-copy">
+              <p className="section-kicker">Take the first step</p>
+              <h2>Your story deserves to be heard.</h2>
+              <p>Share a few details and we will connect you with a counsellor who understands your situation. There is no obligation, no judgement — just a gentle beginning.</p>
+            </div>
             <RegistrationForm idPrefix="footer" />
           </div>
         </section>

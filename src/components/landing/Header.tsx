@@ -52,8 +52,9 @@ export function Header() {
 
       <div
         id="mobile-nav"
-        hidden={!open}
-        className="border-t border-border bg-ivory px-5 pb-6 pt-4 lg:hidden"
+        className={`border-t border-border bg-ivory px-5 pb-6 pt-4 lg:hidden ${
+          open ? "block" : "hidden"
+        }`}
       >
         <nav aria-label="Mobile" className="flex flex-col">
           {NAV.map((item) => (

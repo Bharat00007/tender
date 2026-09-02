@@ -1,11 +1,11 @@
 {
-  "compatibility_date": "2026-08-29",
+  "compatibility_date": "2026-09-02",
   "main": "index.mjs",
   "assets": {
     "binding": "ASSETS",
     "directory": "..\\public"
   },
-  "name": "tanstack-start-ts",
+  "name": "bharat00007-tendor-",
   "compatibility_flags": [
     "nodejs_compat"
   ],
