@@ -1,6 +1,6 @@
 import { n as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-Df-SlbhV.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CUSUkQrD.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var SUPPORT_OPTIONS = [
@@ -963,82 +963,44 @@ function Index() {
 							className: "section-kicker",
 							children: "The people behind TENDER"
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Qualified professionals, genuine care." }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Every TENDER counsellor is qualified, experienced and committed to ethical, person-centred practice." })
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Meet our team" }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Dedicated professionals committed to providing the best support for your well-being." })
 					]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "professionals-grid",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "professional-card",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "professional-avatar",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "/images/professional_1.jpg",
-									alt: "Dr. Ananya Sharma"
+						1,
+						2,
+						3,
+						4,
+						5
+					].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "professional-card",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "professional-avatar",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "h-full w-full bg-sage flex items-center justify-center text-muted",
+								children: "Image Placeholder"
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "professional-info",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", { children: ["Team Member ", item] }),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "role",
+									children: "Role Placeholder"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+									className: "bio",
+									children: [
+										"Biography placeholder for team member ",
+										item,
+										". Detailing their experience and specialization."
+									]
 								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "professional-info",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: "Dr. Ananya Sharma" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "role",
-										children: "Counselling Psychologist"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "bio",
-										children: "Over 10 years of experience in adult psychotherapy, specialising in anxiety, relational trauma and identity."
-									})
-								]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "professional-card",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "professional-avatar",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "/images/professional_2.jpg",
-									alt: "Rahul Verma"
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "professional-info",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: "Rahul Verma" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "role",
-										children: "Child & Family Therapist"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "bio",
-										children: "Dedicated to helping young children and their parents build secure attachments and navigate developmental challenges."
-									})
-								]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "professional-card",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "professional-avatar",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-									src: "/images/professional_3.jpg",
-									alt: "Dr. Priya Kapoor"
-								})
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "professional-info",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: "Dr. Priya Kapoor" }),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "role",
-										children: "Academic Counsellor"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-										className: "bio",
-										children: "Expert in student well-being, academic pressure management and adolescent emotional development."
-									})
-								]
-							})]
-						})
-					]
+							]
+						})]
+					}, item))
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {

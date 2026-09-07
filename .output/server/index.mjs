@@ -16,19 +16,19 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
+	"/assets/routes-DriGn7rW.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"6d50-jlr+7Mv4bRgjOZ3CpsMMGsLnP/s\"",
+		"mtime": "2026-09-07T11:07:48.770Z",
+		"size": 27984,
+		"path": "../public/assets/routes-DriGn7rW.js"
+	},
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
 		"mtime": "2026-08-29T07:50:15.000Z",
 		"size": 20373,
 		"path": "../public/favicon.ico"
-	},
-	"/assets/routes-l8TndGLH.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"7154-ZFNBd8XfJVa7wqRGD6yhxTApp+s\"",
-		"mtime": "2026-09-02T06:17:28.969Z",
-		"size": 29012,
-		"path": "../public/assets/routes-l8TndGLH.js"
 	},
 	"/robots.txt": {
 		"type": "text/plain; charset=utf-8",
@@ -37,19 +37,19 @@ var public_assets_data_default = {
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
+	"/assets/index-Bu_w-17X.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"54bc9-EA1UCdOFhJWyqQV73CL0kCi3n3I\"",
+		"mtime": "2026-09-07T11:07:48.770Z",
+		"size": 347081,
+		"path": "../public/assets/index-Bu_w-17X.js"
+	},
 	"/assets/styles-B5xy_Rtl.css": {
 		"type": "text/css; charset=utf-8",
 		"etag": "\"15d00-EH/bhZ6PhKGKQmD5Cc11xrilg1g\"",
-		"mtime": "2026-09-02T06:17:28.969Z",
+		"mtime": "2026-09-07T11:07:48.772Z",
 		"size": 89344,
 		"path": "../public/assets/styles-B5xy_Rtl.css"
-	},
-	"/assets/index-Dem3Tr5s.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"54bc9-78HVUcyKJ8drJdt7SzEQJvbHrjk\"",
-		"mtime": "2026-09-02T06:17:28.969Z",
-		"size": 347081,
-		"path": "../public/assets/index-Dem3Tr5s.js"
 	},
 	"/images/professional_1.jpg": {
 		"type": "image/jpeg",
@@ -58,19 +58,19 @@ var public_assets_data_default = {
 		"size": 733550,
 		"path": "../public/images/professional_1.jpg"
 	},
-	"/images/professional_3.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"ab549-n1azlq1YZdPyNrdXQrruLmi9WHo\"",
-		"mtime": "2026-09-01T15:52:25.543Z",
-		"size": 701769,
-		"path": "../public/images/professional_3.jpg"
-	},
 	"/images/professional_2.jpg": {
 		"type": "image/jpeg",
 		"etag": "\"b351d-3QU8Orr4FO2A0AhM8lQ5jm3KICU\"",
 		"mtime": "2026-09-01T15:49:51.793Z",
 		"size": 734493,
 		"path": "../public/images/professional_2.jpg"
+	},
+	"/images/real-family-child-therapy.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"bf134-KlgiTAwuJV7CuD5VimsVzE0Ho4s\"",
+		"mtime": "2026-09-01T11:15:20.919Z",
+		"size": 782644,
+		"path": "../public/images/real-family-child-therapy.jpg"
 	},
 	"/images/real-child-mental-health.jpg": {
 		"type": "image/jpeg",
@@ -79,12 +79,12 @@ var public_assets_data_default = {
 		"size": 891068,
 		"path": "../public/images/real-child-mental-health.jpg"
 	},
-	"/images/real-family-child-therapy.jpg": {
+	"/images/professional_3.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"bf134-KlgiTAwuJV7CuD5VimsVzE0Ho4s\"",
-		"mtime": "2026-09-01T11:15:20.919Z",
-		"size": 782644,
-		"path": "../public/images/real-family-child-therapy.jpg"
+		"etag": "\"ab549-n1azlq1YZdPyNrdXQrruLmi9WHo\"",
+		"mtime": "2026-09-01T15:52:25.543Z",
+		"size": 701769,
+		"path": "../public/images/professional_3.jpg"
 	},
 	"/images/real-teen-counselling.jpg": {
 		"type": "image/jpeg",

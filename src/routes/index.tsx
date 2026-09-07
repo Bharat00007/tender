@@ -750,40 +750,22 @@ function Index() {
         <section className="professionals-section reveal-section">
           <div className="professionals-heading">
             <p className="section-kicker">The people behind TENDER</p>
-            <h2>Qualified professionals, genuine care.</h2>
-            <p>Every TENDER counsellor is qualified, experienced and committed to ethical, person-centred practice.</p>
+            <h2>Meet our team</h2>
+            <p>Dedicated professionals committed to providing the best support for your well-being.</p>
           </div>
           <div className="professionals-grid">
-            <div className="professional-card">
-              <div className="professional-avatar">
-                <img src="/images/professional_1.jpg" alt="Dr. Ananya Sharma" />
+            {[1, 2, 3, 4, 5].map((item) => (
+              <div key={item} className="professional-card">
+                <div className="professional-avatar">
+                  <div className="h-full w-full bg-sage flex items-center justify-center text-muted">Image Placeholder</div>
+                </div>
+                <div className="professional-info">
+                  <h4>Team Member {item}</h4>
+                  <p className="role">Role Placeholder</p>
+                  <p className="bio">Biography placeholder for team member {item}. Detailing their experience and specialization.</p>
+                </div>
               </div>
-              <div className="professional-info">
-                <h4>Dr. Ananya Sharma</h4>
-                <p className="role">Counselling Psychologist</p>
-                <p className="bio">Over 10 years of experience in adult psychotherapy, specialising in anxiety, relational trauma and identity.</p>
-              </div>
-            </div>
-            <div className="professional-card">
-              <div className="professional-avatar">
-                <img src="/images/professional_2.jpg" alt="Rahul Verma" />
-              </div>
-              <div className="professional-info">
-                <h4>Rahul Verma</h4>
-                <p className="role">Child &amp; Family Therapist</p>
-                <p className="bio">Dedicated to helping young children and their parents build secure attachments and navigate developmental challenges.</p>
-              </div>
-            </div>
-            <div className="professional-card">
-              <div className="professional-avatar">
-                <img src="/images/professional_3.jpg" alt="Dr. Priya Kapoor" />
-              </div>
-              <div className="professional-info">
-                <h4>Dr. Priya Kapoor</h4>
-                <p className="role">Academic Counsellor</p>
-                <p className="bio">Expert in student well-being, academic pressure management and adolescent emotional development.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
         <section className="registration-section reveal-section" id="register">
