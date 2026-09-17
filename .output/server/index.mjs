@@ -16,13 +16,6 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/assets/routes-DriGn7rW.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"6d50-jlr+7Mv4bRgjOZ3CpsMMGsLnP/s\"",
-		"mtime": "2026-09-07T11:07:48.770Z",
-		"size": 27984,
-		"path": "../public/assets/routes-DriGn7rW.js"
-	},
 	"/favicon.ico": {
 		"type": "image/vnd.microsoft.icon",
 		"etag": "\"4f95-3RXc3p2mhEAs1WBwaIvE0Y0uu0Y\"",
@@ -37,19 +30,61 @@ var public_assets_data_default = {
 		"size": 160,
 		"path": "../public/robots.txt"
 	},
-	"/assets/index-Bu_w-17X.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"54bc9-EA1UCdOFhJWyqQV73CL0kCi3n3I\"",
-		"mtime": "2026-09-07T11:07:48.770Z",
-		"size": 347081,
-		"path": "../public/assets/index-Bu_w-17X.js"
+	"/assets/Ashutosh_Peshkar-ZCP4DiQx.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"17ec7-GE9KnbiGXTk+jYjwok69f0xX2Ew\"",
+		"mtime": "2026-09-17T13:08:06.598Z",
+		"size": 97991,
+		"path": "../public/assets/Ashutosh_Peshkar-ZCP4DiQx.jpg"
 	},
-	"/assets/styles-B5xy_Rtl.css": {
+	"/assets/routes-CHHJrTwl.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"7380-D6xOi5PmQkjv+YhfVYkDfr5QFmk\"",
+		"mtime": "2026-09-17T13:08:06.598Z",
+		"size": 29568,
+		"path": "../public/assets/routes-CHHJrTwl.js"
+	},
+	"/assets/Brij_Sarda-CPyF_ry8.jpeg": {
+		"type": "image/jpeg",
+		"etag": "\"2c018-pzCARSyO2XuahaBFWRMg1m8Patg\"",
+		"mtime": "2026-09-17T13:08:06.598Z",
+		"size": 180248,
+		"path": "../public/assets/Brij_Sarda-CPyF_ry8.jpeg"
+	},
+	"/assets/index-B70xOF-K.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"54bc9-Z3IzG+rj5nEkF5Jlh1EM/Epz/Z8\"",
+		"mtime": "2026-09-17T13:08:06.595Z",
+		"size": 347081,
+		"path": "../public/assets/index-B70xOF-K.js"
+	},
+	"/assets/Mital_Goyal-vOXjyRVA.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"1c1d5-jGntHU7K8nXZJtunfBBw3gCIV5s\"",
+		"mtime": "2026-09-17T13:08:06.601Z",
+		"size": 115157,
+		"path": "../public/assets/Mital_Goyal-vOXjyRVA.jpg"
+	},
+	"/assets/Sushmita_Singh-BGn5X1M_.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"a11f-bcYcM/HL6Ye4yYKZNgsmmIv7pas\"",
+		"mtime": "2026-09-17T13:08:06.604Z",
+		"size": 41247,
+		"path": "../public/assets/Sushmita_Singh-BGn5X1M_.jpg"
+	},
+	"/assets/styles-DzajvXbj.css": {
 		"type": "text/css; charset=utf-8",
-		"etag": "\"15d00-EH/bhZ6PhKGKQmD5Cc11xrilg1g\"",
-		"mtime": "2026-09-07T11:07:48.772Z",
-		"size": 89344,
-		"path": "../public/assets/styles-B5xy_Rtl.css"
+		"etag": "\"15d23-w4Cf8D47ibc0iua6u1iDJ2nFrPA\"",
+		"mtime": "2026-09-17T13:08:06.604Z",
+		"size": 89379,
+		"path": "../public/assets/styles-DzajvXbj.css"
+	},
+	"/assets/Shreya_Dhananjay_Karkhanis-ogAwXN6S.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"1d75b-vOic5wwkZI0aI29x/yH4Sw0VQl4\"",
+		"mtime": "2026-09-17T13:08:06.602Z",
+		"size": 120667,
+		"path": "../public/assets/Shreya_Dhananjay_Karkhanis-ogAwXN6S.jpg"
 	},
 	"/images/professional_1.jpg": {
 		"type": "image/jpeg",
@@ -65,12 +100,12 @@ var public_assets_data_default = {
 		"size": 734493,
 		"path": "../public/images/professional_2.jpg"
 	},
-	"/images/real-family-child-therapy.jpg": {
+	"/images/professional_3.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"bf134-KlgiTAwuJV7CuD5VimsVzE0Ho4s\"",
-		"mtime": "2026-09-01T11:15:20.919Z",
-		"size": 782644,
-		"path": "../public/images/real-family-child-therapy.jpg"
+		"etag": "\"ab549-n1azlq1YZdPyNrdXQrruLmi9WHo\"",
+		"mtime": "2026-09-01T15:52:25.543Z",
+		"size": 701769,
+		"path": "../public/images/professional_3.jpg"
 	},
 	"/images/real-child-mental-health.jpg": {
 		"type": "image/jpeg",
@@ -79,19 +114,12 @@ var public_assets_data_default = {
 		"size": 891068,
 		"path": "../public/images/real-child-mental-health.jpg"
 	},
-	"/images/professional_3.jpg": {
+	"/images/real-family-child-therapy.jpg": {
 		"type": "image/jpeg",
-		"etag": "\"ab549-n1azlq1YZdPyNrdXQrruLmi9WHo\"",
-		"mtime": "2026-09-01T15:52:25.543Z",
-		"size": 701769,
-		"path": "../public/images/professional_3.jpg"
-	},
-	"/images/real-teen-counselling.jpg": {
-		"type": "image/jpeg",
-		"etag": "\"c9a73-Me4MXDx5v+gW8lNpY077eW0nKO8\"",
-		"mtime": "2026-09-01T11:15:34.047Z",
-		"size": 825971,
-		"path": "../public/images/real-teen-counselling.jpg"
+		"etag": "\"bf134-KlgiTAwuJV7CuD5VimsVzE0Ho4s\"",
+		"mtime": "2026-09-01T11:15:20.919Z",
+		"size": 782644,
+		"path": "../public/images/real-family-child-therapy.jpg"
 	},
 	"/images/real-teacher-student-support.jpg": {
 		"type": "image/jpeg",
@@ -99,6 +127,13 @@ var public_assets_data_default = {
 		"mtime": "2026-09-01T11:14:51.652Z",
 		"size": 838478,
 		"path": "../public/images/real-teacher-student-support.jpg"
+	},
+	"/images/real-teen-counselling.jpg": {
+		"type": "image/jpeg",
+		"etag": "\"c9a73-Me4MXDx5v+gW8lNpY077eW0nKO8\"",
+		"mtime": "2026-09-01T11:15:34.047Z",
+		"size": 825971,
+		"path": "../public/images/real-teen-counselling.jpg"
 	}
 };
 //#endregion

@@ -1,8 +1,40 @@
 import { n as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CUSUkQrD.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-A4RzMDEv.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
+var TEAM_MEMBERS = [
+	{
+		name: "Sushmita Singh",
+		role: "Marketing Head",
+		bio: "Marketing Head at InfoCepts, leading strategic marketing initiatives for data and AI services. With experience across global markets, she specializes in market positioning, analyst engagement, and revenue-aligned programs.",
+		image: "/assets/Sushmita_Singh-BGn5X1M_.jpg"
+	},
+	{
+		name: "Brij Sarda",
+		role: "Founder & Head – MediGrace, Nagpur",
+		bio: "Dynamic leader and visionary founder of MediGrace, a premier healthcare advertising and training agency based in Nagpur. With a rich background in the pharmaceutical industry, he has conducted over 3000 training sessions globally.",
+		image: "/assets/Brij_Sarda-CPyF_ry8.jpeg"
+	},
+	{
+		name: "Mitali Goyal",
+		role: "Interior Designer",
+		bio: "An interior designer with a deep curiosity for architecture, nature, and people. Believes that whether through the spaces we create or the relationships we build, the way we feel and the way we live are deeply connected.",
+		image: "/assets/Mital_Goyal-vOXjyRVA.jpg"
+	},
+	{
+		name: "Ashutosh Peshkar",
+		role: "Strategic Leader",
+		bio: "Determined and strategic leader with over two decades of progressive IT experience. Proven capabilities as an advisory role to customers and transformational expert in Oracle ERP and Cloud Applications.",
+		image: "/assets/Ashutosh_Peshkar-ZCP4DiQx.jpg"
+	},
+	{
+		name: "Shreya Dhananjay Karkhanis",
+		role: "Deputy Engineer",
+		bio: "Working as Deputy Engineer in National Highway Division Nagpur. BE Civil from Government College of Engineering Amravati.",
+		image: "/assets/Shreya_Dhananjay_Karkhanis-ogAwXN6S.jpg"
+	}
+];
 var SUPPORT_OPTIONS = [
 	"Myself",
 	"My child",
@@ -968,39 +1000,42 @@ function Index() {
 					]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "professionals-grid",
-					children: [
-						1,
-						2,
-						3,
-						4,
-						5
-					].map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					children: TEAM_MEMBERS.map((member, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "professional-card",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "professional-avatar",
-							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "h-full w-full bg-sage flex items-center justify-center text-muted",
-								children: "Image Placeholder"
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
+								src: member.image,
+								alt: member.name
 							})
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 							className: "professional-info",
 							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h4", { children: ["Team Member ", item] }),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", { children: member.name }),
+								member.role && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "role",
-									children: "Role Placeholder"
+									children: member.role
 								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+								member.bio.startsWith("http") ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "bio",
-									children: [
-										"Biography placeholder for team member ",
-										item,
-										". Detailing their experience and specialization."
-									]
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+										href: member.bio,
+										target: "_blank",
+										rel: "noreferrer",
+										className: "text-link",
+										style: {
+											display: "inline-block",
+											marginTop: "10px"
+										},
+										children: "View Profile on LinkedIn"
+									})
+								}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "bio",
+									children: member.bio
 								})
 							]
 						})]
-					}, item))
+					}, i))
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {

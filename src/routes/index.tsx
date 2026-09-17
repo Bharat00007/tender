@@ -1,5 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect, useRef } from "react";
+
+import SushmitaImage from "../assets/Sushmita_Singh.jpg";
+import BrijImage from "../assets/Brij_Sarda.jpeg";
+import MitaliImage from "../assets/Mital_Goyal.jpg";
+import AshutoshImage from "../assets/Ashutosh_Peshkar.jpg";
+import ShreyaImage from "../assets/Shreya_Dhananjay_Karkhanis.jpg";
+
+const TEAM_MEMBERS = [
+  {
+    name: "Sushmita Singh",
+    role: "Marketing Head",
+    bio: "Marketing Head at InfoCepts, leading strategic marketing initiatives for data and AI services. With experience across global markets, she specializes in market positioning, analyst engagement, and revenue-aligned programs.",
+    image: SushmitaImage
+  },
+  {
+    name: "Brij Sarda",
+    role: "Founder & Head – MediGrace, Nagpur",
+    bio: "Dynamic leader and visionary founder of MediGrace, a premier healthcare advertising and training agency based in Nagpur. With a rich background in the pharmaceutical industry, he has conducted over 3000 training sessions globally.",
+    image: BrijImage
+  },
+  {
+    name: "Mitali Goyal",
+    role: "Interior Designer",
+    bio: "An interior designer with a deep curiosity for architecture, nature, and people. Believes that whether through the spaces we create or the relationships we build, the way we feel and the way we live are deeply connected.",
+    image: MitaliImage
+  },
+  {
+    name: "Ashutosh Peshkar",
+    role: "Strategic Leader",
+    bio: "Determined and strategic leader with over two decades of progressive IT experience. Proven capabilities as an advisory role to customers and transformational expert in Oracle ERP and Cloud Applications.",
+    image: AshutoshImage
+  },
+  {
+    name: "Shreya Dhananjay Karkhanis",
+    role: "Deputy Engineer",
+    bio: "Working as Deputy Engineer in National Highway Division Nagpur. BE Civil from Government College of Engineering Amravati.",
+    image: ShreyaImage
+  }
+];
 const title = "TENDER Counselling | A Safe Space to Be Heard";
 const description =
   "Academic, mental health, relationship and health counselling for students, individuals, couples and families.";
@@ -754,15 +793,23 @@ function Index() {
             <p>Dedicated professionals committed to providing the best support for your well-being.</p>
           </div>
           <div className="professionals-grid">
-            {[1, 2, 3, 4, 5].map((item) => (
-              <div key={item} className="professional-card">
+            {TEAM_MEMBERS.map((member, i) => (
+              <div key={i} className="professional-card">
                 <div className="professional-avatar">
-                  <div className="h-full w-full bg-sage flex items-center justify-center text-muted">Image Placeholder</div>
+                  <img src={member.image} alt={member.name} />
                 </div>
                 <div className="professional-info">
-                  <h4>Team Member {item}</h4>
-                  <p className="role">Role Placeholder</p>
-                  <p className="bio">Biography placeholder for team member {item}. Detailing their experience and specialization.</p>
+                  <h4>{member.name}</h4>
+                  {member.role && <p className="role">{member.role}</p>}
+                  {member.bio.startsWith("http") ? (
+                    <p className="bio">
+                      <a href={member.bio} target="_blank" rel="noreferrer" className="text-link" style={{ display: 'inline-block', marginTop: '10px' }}>
+                        View Profile on LinkedIn
+                      </a>
+                    </p>
+                  ) : (
+                    <p className="bio">{member.bio}</p>
+                  )}
                 </div>
               </div>
             ))}
