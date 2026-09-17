@@ -679,16 +679,18 @@ em { color: var(--terracotta); font-weight: 400; font-style: italic; }
   line-height: 1.7;
 }
 .professionals-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1050px;
   margin: 0 auto;
 }
 .professional-card {
+  width: calc(33.3333% - 16px);
   background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
+  border: 1px solid #d0aba0;
+  border-radius: 4px;
   overflow: hidden;
   text-align: center;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
@@ -701,7 +703,7 @@ em { color: var(--terracotta); font-weight: 400; font-style: italic; }
 }
 .professional-avatar {
   width: 100%;
-  height: clamp(300px, 35vw, 420px);
+  aspect-ratio: 1 / 1;
   background: var(--sage);
   margin: 0;
   overflow: hidden;
@@ -717,24 +719,23 @@ em { color: var(--terracotta); font-weight: 400; font-style: italic; }
   transform: scale(1.05);
 }
 .professional-info {
-  padding: 32px 28px;
+  padding: 24px 20px 32px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  align-items: center;
 }
 .professional-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-family: var(--font-display);
   font-weight: 400;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: var(--ink);
 }
 .professional-card .role {
-  font-size: 0.72rem;
-  color: var(--terracotta);
+  font-size: 0.88rem;
+  color: #923444;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
   margin-bottom: 16px;
 }
 .professional-card .bio {
@@ -984,7 +985,7 @@ footer {
   .service-grid { grid-template-columns: repeat(2, 1fr); }
   .principles, .faq-section { grid-template-columns: 1fr; gap: 60px; }
   .registration-container { grid-template-columns: 1fr; gap: 48px; }
-  .professionals-grid { grid-template-columns: repeat(2, 1fr); }
+  .professional-card { width: calc(50% - 12px); }
 }
 
 @media (width <= 760px) {
@@ -1029,7 +1030,7 @@ footer {
   footer { grid-template-columns: 1fr; padding-top: 60px; }
   .footer-note { flex-direction: column; gap: 12px; }
   .registration-container { grid-template-columns: 1fr; gap: 32px; }
-  .professionals-grid { grid-template-columns: 1fr; }
+  .professional-card { width: 100%; }
   .support-for-options { gap: 6px; }
   .registration-form { padding: 32px 24px; }
   .form-group input, .form-group select { padding: 12px 14px; font-size: 16px; }
