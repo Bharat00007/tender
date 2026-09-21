@@ -1,13 +1,13 @@
 import { n as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-A4RzMDEv.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BoS0-YQS.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var TEAM_MEMBERS = [
 	{
 		name: "Sushmita Singh",
 		role: "Marketing Head",
-		bio: "Marketing Head at InfoCepts, leading strategic marketing initiatives for data and AI services. With experience across global markets, she specializes in market positioning, analyst engagement, and revenue-aligned programs.",
+		bio: "Marketing Head at MultiNational Company, leading strategic marketing initiatives for data and AI services. With experience across global markets, she specializes in market positioning, analyst engagement, and revenue-aligned programs.",
 		image: "/assets/Sushmita_Singh-BGn5X1M_.jpg"
 	},
 	{
